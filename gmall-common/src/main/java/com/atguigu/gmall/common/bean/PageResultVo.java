@@ -12,6 +12,7 @@ import java.util.List;
  */
 @Data
 public class PageResultVo implements Serializable {
+
 	private static final long serialVersionUID = 1L;
 	//每页记录数
 	private Long pageSize;
@@ -23,7 +24,7 @@ public class PageResultVo implements Serializable {
 	private Long totalPage;
 	//列表数据
 	private List<?> list;
-	
+
 	/**
 	 * 分页
 	 * @param list        列表数据
