@@ -3,15 +3,50 @@ package com.atguigu.gmall.pms.api;
 import com.atguigu.gmall.common.bean.PageParamVo;
 import com.atguigu.gmall.common.bean.ResponseVo;
 import com.atguigu.gmall.pms.entity.*;
+import com.atguigu.gmall.pms.vo.ItemGroupVo;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 public interface GmallPmsApi {
+
+    @GetMapping("pms/attrgroup/withattrvalues")
+    public ResponseVo<List<ItemGroupVo>> queryGroupsBySpuIdAndCid(
+            @RequestParam("spuId")Long spuId,
+            @RequestParam("skuId")Long skuId,
+            @RequestParam("cid")Long cid
+    );
+
+    @GetMapping("pms/skuattrvalue/spu/{spuId}")
+    public ResponseVo<List<SkuAttrValueEntity>> querySkuAttrValueBySpuId(@PathVariable("spuId")Long spuId);
+
+    @GetMapping("pms/skuimages/sku/{skuId}")
+    public ResponseVo<List<SkuImagesEntity>> queryImagesBySkuId(@PathVariable("skuId") Long skuId);
+
+    /**
+     * 根据id查询sku信息
+     * @param id
+     * @return
+     */
+    @GetMapping("pms/sku/{id}")
+    public ResponseVo<SkuEntity> querySkuById(@PathVariable("id") Long id);
+
+    /**
+     * 根据id查询spu信息
+     * @param id
+     * @return
+     */
+    @GetMapping("pms/spu/{id}")
+    public ResponseVo<SpuEntity> querySpuById(@PathVariable("id") Long id);
+
+    /**
+     * 根据id查询spu的描述信息
+     * @param spuId
+     * @return
+     */
+    @GetMapping("pms/spudesc/{spuId}")
+    public ResponseVo<SpuDescEntity> querySpuDescById(@PathVariable("spuId") Long spuId);
 
     @PostMapping("pms/spu/page")
     public ResponseVo<List<SpuEntity>> querySpusByPage(@RequestBody PageParamVo pageParamVo);
