@@ -39,7 +39,7 @@ public class ${className}Controller {
      */
     @GetMapping
     @ApiOperation("分页查询")
-    public ResponseVo<PageResultVo> list(PageParamVo paramVo){
+    public ResponseVo<PageResultVo> query${className}ByPage(PageParamVo paramVo){
         PageResultVo pageResultVo = ${classname}Service.queryPage(paramVo);
 
         return ResponseVo.ok(pageResultVo);

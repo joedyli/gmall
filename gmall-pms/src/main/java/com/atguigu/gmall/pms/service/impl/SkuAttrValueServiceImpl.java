@@ -1,6 +1,9 @@
 package com.atguigu.gmall.pms.service.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 import java.util.Map;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -24,6 +27,14 @@ public class SkuAttrValueServiceImpl extends ServiceImpl<SkuAttrValueMapper, Sku
         );
 
         return new PageResultVo(page);
+    }
+
+    @Autowired
+    private SkuAttrValueMapper skuAttrValueMapper;
+
+    @Override
+    public List<SkuAttrValueEntity> querySearchAttrValueBySkuId(Long skuId) {
+        return this.skuAttrValueMapper.querySearchAttrValueBySkuId(skuId);
     }
 
 }

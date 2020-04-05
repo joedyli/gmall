@@ -6,8 +6,16 @@ import lombok.Data;
 
 import java.util.List;
 
-@Data
+//@Data
 public class GroupVo extends AttrGroupEntity {
 
     private List<AttrEntity> attrEntities;
+
+    public List<AttrEntity> getAttrEntities() {
+        return attrEntities;
+    }
+
+    public void setAttrEntities(List<AttrEntity> attrEntities) {
+        this.attrEntities = attrEntities;
+    }
 }

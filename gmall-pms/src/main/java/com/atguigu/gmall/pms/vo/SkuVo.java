@@ -36,4 +36,92 @@ public class SkuVo extends SkuEntity {
     private Integer addOther;
 
     private List<SkuAttrValueEntity> saleAttrs;
+
+    public List<String> getImages() {
+        return images;
+    }
+
+    public void setImages(List<String> images) {
+        this.images = images;
+    }
+
+    public BigDecimal getGrowBounds() {
+        return growBounds;
+    }
+
+    public void setGrowBounds(BigDecimal growBounds) {
+        this.growBounds = growBounds;
+    }
+
+    public BigDecimal getBuyBounds() {
+        return buyBounds;
+    }
+
+    public void setBuyBounds(BigDecimal buyBounds) {
+        this.buyBounds = buyBounds;
+    }
+
+    public List<Integer> getWork() {
+        return work;
+    }
+
+    public void setWork(List<Integer> work) {
+        this.work = work;
+    }
+
+    public BigDecimal getFullPrice() {
+        return fullPrice;
+    }
+
+    public void setFullPrice(BigDecimal fullPrice) {
+        this.fullPrice = fullPrice;
+    }
+
+    public BigDecimal getReducePrice() {
+        return reducePrice;
+    }
+
+    public void setReducePrice(BigDecimal reducePrice) {
+        this.reducePrice = reducePrice;
+    }
+
+    public Integer getFullAddOther() {
+        return fullAddOther;
+    }
+
+    public void setFullAddOther(Integer fullAddOther) {
+        this.fullAddOther = fullAddOther;
+    }
+
+    public Integer getFullCount() {
+        return fullCount;
+    }
+
+    public void setFullCount(Integer fullCount) {
+        this.fullCount = fullCount;
+    }
+
+    public BigDecimal getDiscount() {
+        return discount;
+    }
+
+    public void setDiscount(BigDecimal discount) {
+        this.discount = discount;
+    }
+
+    public Integer getAddOther() {
+        return addOther;
+    }
+
+    public void setAddOther(Integer addOther) {
+        this.addOther = addOther;
+    }
+
+    public List<SkuAttrValueEntity> getSaleAttrs() {
+        return saleAttrs;
+    }
+
+    public void setSaleAttrs(List<SkuAttrValueEntity> saleAttrs) {
+        this.saleAttrs = saleAttrs;
+    }
 }

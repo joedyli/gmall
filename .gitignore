@@ -2,6 +2,7 @@
 *.iml
 mvnw*
 .mvn/
+target/
 
 # Compiled class file
 *.class
